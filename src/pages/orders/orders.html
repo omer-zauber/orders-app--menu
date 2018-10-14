@@ -1,0 +1,38 @@
+<ion-header>
+
+  <ion-navbar>
+
+
+    <ion-title>Orders</ion-title>
+
+  </ion-navbar>
+  <ion-toolbar no-border-top>
+    <ion-buttons start>
+      <button ion-button icon-only (click)="scanBarcode()">
+        <ion-icon name="barcode"></ion-icon>
+      </button>
+    </ion-buttons>
+    <!-- <ion-searchbar placeholder="Filter Orders" [(ngModel)]="search" (ionInput)="filterOrders($event)"></ion-searchbar> -->
+    <ion-searchbar placeholder="Filter Orders" (ngModelChange)="filterOrders($event)" [(ngModel)]="search" ></ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-card *ngFor="let order of orders">
+    <ion-card-header>
+      <p class='orderId'>#{{order.orderId}}</p>
+      <h4>{{order.customerName}}</h4>
+    </ion-card-header>
+    <ion-card-content>
+      <p>Customer ID #: {{order.customerId}}</p>
+      <p>Customer Address: {{order.customerAddress}}</p>
+    </ion-card-content>
+    <ion-row>
+      <ion-col text-right>
+        <button ion-button clear small (click)="onOrderDetails(order)">Details</button>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+</ion-content>
