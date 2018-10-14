@@ -1,15 +1,13 @@
 page-home {
-
-
-
-      ion-searchbar{        
-        .searchbar-input-container{            
-            .searchbar-input{
+    ion-searchbar {
+        .searchbar-input-container {
+            .searchbar-input {
                 object-fit: contain;
                 border-radius: 15px;
                 background-color: #3c4268;
                 width: 266px;
                 height: 30px;
+
                 // font-family: OpenSans;
                 font-size: 14px;
                 text-align: center;
@@ -17,40 +15,43 @@ page-home {
                 line-height: 6.29;
                 letter-spacing: -0.1px;
                 color: #8e93af;
+
                 // margin: 0 auto;
-    
+           
             }
+
             .searchbar-search-icon {
-                top:4px;
+                top: 4px;
             }
         }
-     }
-     ion-content{
-        
-        
-        .item-md{
-            background-color: map-get($colors, primary);
-        }
-        
-        
-        .scroll-content{
+    }
+
+    ion-content {
+        .item-md {
             background-color: map-get($colors, primary);
         }
 
+        .scroll-content {
+            // background-color: map-get($colors, primary);
+            background-image: url('/assets/imgs/background.svg'), repeating-linear-gradient(map-get($colors, primary), white);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
 
-        h2{
+        h2 {
             letter-spacing: 0.4px;
             text-align: center;
             padding-top: 5%;
             color: #4e9cf6;
         }
 
-        p{
+        p {
             font-size: 17px;
             line-height: 1.5;
             text-align: center;
             color: #fff;
-            color:map-get($colors, light);
+            color: map-get($colors, light);
         }
     }
 
@@ -60,28 +61,64 @@ page-home {
 
     .button {
         border-radius: 3px;
-        color: map-get($colors, primary);
-        text-transform: none;
-        font-size: 18px;
-        line-height: 1.22;
-        letter-spacing: -0.2px;
-        text-align: left;
-        * {
-            padding: 0 10px 0 30px;
-            place-content: space-between;
+
+        .button--div {
+            position: relative;
+        }
+
+        .button--icon {
+            position: fixed;
+            left: 0;
+            right: 80%;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+
+            // center point of the left 0-20%/0-100% area
+       
+        }
+
+        .button--title {
+            color: map-get($colors, primary);
+            text-transform: none;
+            font-size: 18px;
+            line-height: 1.22;
+            height: 1.22em;
+            letter-spacing: -0.2px;
+            text-align: left;
+            position: fixed;
+            left: 20%;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+
+            // left - 20% line, center highet
+        }
+
+        .button--arrow {
+            position: fixed;
+            left: 80%;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+
+            // center point of the right 0-20%/0-100% area
+       
         }
     }
-    // .button--icon_left {
-    //     float: left;
-    // }
-
-    // .button--icon_right {
-    //     float: right;
-    // }
 
     ion-footer {
+        
         img {
-            padding-left: 40%;
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 82%;
+            bottom: 0;
+            margin: auto;
+
+            // center point of the bottom 0-18%/0-100% area
         }
     }
 }

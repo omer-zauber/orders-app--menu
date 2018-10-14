@@ -14,19 +14,30 @@
   <p>Navigate by:</p>
   <ion-list>
     <ion-item no-lines>
-      <button ion-button large full color="light" [navPush]="ordersPage"><img src="assets/imgs/miniral-icn.svg"
-          >
-        Minerals
-        <img src="assets/imgs/arrow.svg" text-left></button>
+      <button ion-button large full color="light" [navPush]="ordersPage">
+        <div class="button--div">
+          <img class="button--icon" src="assets/imgs/miniral-icn.svg">
+          <span class="button--title"> Minerals </span>
+          <img class="button--arrow" src="assets/imgs/arrow.svg">
+        </div>
+      </button>
+
     </ion-item>
     <ion-item no-lines>
-      <button ion-button large full color="light" [navPush]="ordersPage"><img src="assets/imgs/application-icn.svg"
-          text-right> Applications<img src="assets/imgs/arrow.svg" text-left></button>
+
+      <button ion-button large full color="light" [navPush]="ordersPage">
+        <div class="button--div">
+          <img class="button--icon" src="assets/imgs/application-icn.svg">
+          <span class="button--title"> Applications </span>
+          <img class="button--arrow" src="assets/imgs/arrow.svg">
+        </div>
+      </button>
+
     </ion-item>
   </ion-list>
 </ion-content>
 
-<ion-footer padding><img src="assets/imgs/icl-logo.png"></ion-footer>
+<ion-footer ><img src="assets/imgs/icl-logo.png"></ion-footer>
 
 <!-- <ion-header>
   <ion-navbar>
